@@ -1,48 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS Portfolio - Dean</title>
+    <style>
+        :root {
+            /* AWS Color Palette */
+            --aws-orange: #FF9900;
+            --aws-blue: #232F3E;
+            --aws-light-blue: #2B3C59;
+            --aws-dark-gray: #16191F;
+            --aws-light-gray: #EAEDED;
+            --aws-white: #FFFFFF;
+            --aws-border: #4D5C70;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Amazon Ember', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--aws-light-gray);
+            color: var(--aws-dark-gray);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--aws-blue);
+            color: var(--aws-white);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--aws-orange);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        h2 {
+            color: var(--aws-blue);
+            border-bottom: 3px solid var(--aws-orange);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        article {
+            background-color: var(--aws-white);
+            border-radius: 8px;
+            border: 1px solid var(--aws-border);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        h3 {
+            color: var(--aws-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        a {
+            display: inline-block;
+            background-color: var(--aws-orange);
+            color: var(--aws-white);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 0.5rem 0 1rem 0;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        a:hover {
+            background-color: #E88804;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 1rem;
+            border: 1px solid var(--aws-border);
+        }
+        
+        footer {
+            background-color: var(--aws-blue);
+            color: var(--aws-white);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-top: 4px solid var(--aws-orange);
+        }
+
+        /* AWS Service Icons */
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Project header with icon */
+        .project-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            article {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>AWS Solutions Architecture Portfolio</h1>
+        <p>Demonstrating cloud expertise with AWS services</p>
     </header>
-
+    
     <section>
         <h2>AWS Projects</h2>
-
+        
         <article>
-            <h3>AWS-IAM</h3>
+            <div class="project-header">
+                <img src="/api/placeholder/40/40" alt="IAM Icon" class="service-icon">
+                <h3>AWS-IAM</h3>
+            </div>
             <a href="https://deanmtd.github.io/AWS-IAM/">View Repository</a>
             <p>This project demonstrates implementation of AWS Identity and Access Management (IAM) best practices for secure cloud access control. It outlines the complete setup and configuration of IAM users, groups, policies, roles, and security measures following AWS recommended practices.</p>
-            <!img src="images/aws-iam-screenshot.png" alt="AWS-IAM Screenshot" width="400">
+            <img src="/api/placeholder/400/250" alt="AWS-IAM Screenshot" width="400">
         </article>
-
+        
         <article>
-            <h3>aws-client-vpn</h3>
+            <div class="project-header">
+                <img src="/api/placeholder/40/40" alt="VPN Icon" class="service-icon">
+                <h3>aws-client-vpn</h3>
+            </div>
             <a href="https://github.com/deanmtd/aws-client-vpn">View Repository</a>
-            <p>In this demo, we will configure a client VPN deployment allowing workstations to connect to a AWS VPC in a safe and secure way</p>
-            <!img src="images/another-aws-project-screenshot.png" alt="Another AWS Project Screenshot" width="400">
+            <p>In this demo, we will configure a client VPN deployment allowing workstations to connect to a AWS VPC in a safe and secure way. This solution ensures secure access to private resources within your AWS environment.</p>
+            <img src="/api/placeholder/400/250" alt="AWS Client VPN Screenshot" width="400">
         </article>
-		
-	<article>
-            <h3>AWS-HA-Scalability-ELB-ASG</h3>
+        
+        <article>
+            <div class="project-header">
+                <img src="/api/placeholder/40/40" alt="Auto Scaling Icon" class="service-icon">
+                <h3>AWS-HA-Scalability-ELB-ASG</h3>
+            </div>
             <a href="https://deanmtd.github.io/AWS-HA-Scalability-ELB-ASG/">View Repository</a>
-            <p>In this demo, we will configure a client VPN deployment allowing workstations to connect to a AWS VPC in a safe and secure way</p>
-            <!img src="images/another-aws-project-screenshot.png" alt="Another AWS Project Screenshot" width="400">
+            <p>This project demonstrates how to implement high availability and scalability using Elastic Load Balancers (ELB) and Auto Scaling Groups (ASG). Learn how to create resilient, scalable architectures that can handle traffic fluctuations efficiently.</p>
+            <img src="/api/placeholder/400/250" alt="ELB and ASG Screenshot" width="400">
         </article>
-
-	<article>
-            <h3>AWS-DB-RDS-Aurora-ElastiCache</h3>
+        
+        <article>
+            <div class="project-header">
+                <img src="/api/placeholder/40/40" alt="Database Icon" class="service-icon">
+                <h3>AWS-DB-RDS-Aurora-ElastiCache</h3>
+            </div>
             <a href="https://deanmtd.github.io/AWS-DB-RDS-Aurora-ElastiCache/">View Repository</a>
-            <p>In this demo, we will configure a client VPN deployment allowing workstations to connect to a AWS VPC in a safe and secure way</p>
-            <!img src="images/another-aws-project-screenshot.png" alt="Another AWS Project Screenshot" width="400">
+            <p>Explore managed database solutions with this comprehensive project covering Amazon RDS, Aurora, and ElastiCache. Learn how to design and implement efficient, scalable database architectures in the AWS cloud.</p>
+            <img src="/api/placeholder/400/250" alt="AWS Database Services Screenshot" width="400">
         </article>
-
-        </section>
-
+    </section>
+    
     <footer>
-        <p>&copy; Dean 2025</p>
+        <p>&copy; Dean 2025 | AWS Solutions Architect</p>
     </footer>
 </body>
 </html>
